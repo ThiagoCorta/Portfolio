@@ -1,0 +1,80 @@
+<div class="container pt-4">
+  <div class="text-center">
+    <div class="donutContainer css" *ngFor="let item of skillsDonuts">
+      <h2 class="description-item" [style.color]="item.color">
+        {{ item.titulo }}
+      </h2>
+      <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <circle
+            id="circle"
+            [style.stroke-dashoffset]="item.porcentaje"
+            class="donut"
+            r="50"
+            cy="80"
+            cx="80"
+            stroke="#fff"
+            stroke-width="2"
+            fill="none"
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="timeline mt-5">
+    <div class="line"></div>
+    <div class="justify-content-center">
+      <div class="row">
+        <div class="col">
+          <div class="bubble"></div>
+          <p class="title-item description-item">09/2019 - Actualmente</p>
+          <p class="description-item normal">
+            Accenture - Front End Dev
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="bubble"></div>
+          <p class="title-item description-item normal">
+            02/2019 - Actualmente
+          </p>
+          <p class="description-item normal">
+            Tecnico Superior En Programacion - UTN
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="bubble"></div>
+          <p class="title-item description-item normal">03/2012 - 12/2017</p>
+
+          <p class="description-item normal">
+            Escuela Secundaria en Economia
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="endLine"></div>
+  </div>
+  <div class="github-side py-5">
+    <p class="description-item text-center">
+      ¡Muchas Gracias por tomarte el tiempo de ver mi CV!. <br />
+      Podes encontrar todos mis proyectos en Github y contactarme por Linkedin.
+    </p>
+    <div class="row d-flex justify-content-center mb-5">
+      <div class="col-xs-6">
+        <p (click)="navigateGithub()" class="normal-font">
+          <i class="fab fa-github fa-3x mx-2"></i>
+        </p>
+      </div>
+      <div class="col-xs-6">
+        <p (click)="navigateLinkedin()" class="normal-font">
+          <i class="fab fa-linkedin fa-3x mx-2"></i>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

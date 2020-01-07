@@ -1,0 +1,15 @@
+.navbar {
+  padding: 0rem 1rem;
+  z-index: 3000;
+  margin-top: 15px;
+  display: block;
+
+  &.fixed-top {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.active {
+  font-weight: 200;
+}
